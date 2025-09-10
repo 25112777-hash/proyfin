@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recetas - Gastronomía Deliciosa</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 
     <style>
         * {
@@ -21,7 +22,7 @@
 
         header {
             background-color: #2a9d8f;
-            padding: 40px 20px;
+            padding: 50px 20px;
             color: white;
             text-align: center;
         }
@@ -29,7 +30,7 @@
         header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3em;
-            margin: 0;
+            margin-bottom: 10px;
         }
 
         nav {
@@ -51,25 +52,66 @@
         }
 
         main {
-            padding: 40px 20px;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
 
         main h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2em;
             color: #2a9d8f;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-card h3 {
+            color: #e76f51;
+            margin-top: 0;
+        }
+
+        .recipe-card p {
+            font-size: 0.95em;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 60px;
         }
 
         .download-btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
+            padding: 15px 30px;
             background-color: #e76f51;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 1.1em;
             font-weight: bold;
             transition: background 0.3s;
         }
@@ -79,11 +121,10 @@
         }
 
         footer {
-            background-color: #e9c46a;
+            background-color: #264653;
+            color: white;
             text-align: center;
             padding: 20px;
-            color: #333;
-            font-weight: bold;
             margin-top: 40px;
         }
     </style>
@@ -91,7 +132,8 @@
 <body>
 
     <header>
-        <h1>Recetas</h1>
+        <h1>Recetas Deliciosas</h1>
+        <p>Descubre platos increíbles y cocina como un experto</p>
     </header>
 
     <nav>
@@ -103,9 +145,32 @@
 
     <main>
         <h2>Explora nuestras mejores recetas</h2>
-        <p>Te ofrecemos una variedad de recetas deliciosas para todo tipo de ocasión. Desde platos tradicionales hasta opciones gourmet.</p>
+        <p>Seleccionamos recetas variadas para todos los gustos: desde lo clásico hasta lo innovador, para sorprender a tus comensales.</p>
 
-        <a href="menu1.pdf" class="download-btn" download>📄 Descargar menú en PDF</a>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <h3>🥘 Paella Valenciana</h3>
+                <p>Un clásico español lleno de sabor, con arroz, mariscos y el toque justo de azafrán.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>🍝 Pasta al Pesto</h3>
+                <p>Rápida y sabrosa, con albahaca fresca, piñones y parmesano. Ideal para una cena ligera.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>🥗 Ensalada Mediterránea</h3>
+                <p>Con tomates cherry, queso feta, pepino y aceitunas. Perfecta para días calurosos.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>🍰 Cheesecake de Frutos Rojos</h3>
+                <p>Postre cremoso y delicado, con una base de galletas y cobertura ácida y dulce a la vez.</p>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>¿Prefieres tenerlo en papel?</h2>
+            <p>Puedes descargar un PDF con nuestras recetas destacadas:</p>
+            <a href="menu1.pdf" class="download-btn" download>📄 Descargar menú en PDF</a>
+        </div>
     </main>
 
     <footer>
@@ -114,3 +179,5 @@
 
 </body>
 </html>
+
+
