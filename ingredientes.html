@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ingredientes - Gastronomía Deliciosa</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 
     <style>
         * {
@@ -21,7 +22,7 @@
 
         header {
             background-color: #2a9d8f;
-            padding: 40px 20px;
+            padding: 50px 20px;
             color: white;
             text-align: center;
         }
@@ -29,7 +30,7 @@
         header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3em;
-            margin: 0;
+            margin-bottom: 10px;
         }
 
         nav {
@@ -51,27 +52,54 @@
         }
 
         main {
-            padding: 40px 20px;
             max-width: 900px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
 
         main h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2em;
             color: #2a9d8f;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        main ul {
-            margin-top: 20px;
+        main p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .ingredient-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .ingredient-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ingredient-card h3 {
+            margin-top: 0;
+            color: #e76f51;
         }
 
         footer {
-            background-color: #e9c46a;
+            background-color: #264653;
+            color: white;
             text-align: center;
             padding: 20px;
-            color: #333;
-            font-weight: bold;
             margin-top: 40px;
         }
     </style>
@@ -79,7 +107,8 @@
 <body>
 
     <header>
-        <h1>Ingredientes</h1>
+        <h1>Ingredientes Clave</h1>
+        <p>La base de una cocina excepcional comienza con buenos ingredientes</p>
     </header>
 
     <nav>
@@ -90,16 +119,40 @@
     </nav>
 
     <main>
-        <h2>Conoce los ingredientes clave</h2>
-        <p>La base de una buena receta son ingredientes frescos y de calidad. Aquí te presentamos algunos imprescindibles en cualquier cocina:</p>
+        <h2>Selecciona, combina y cocina con lo mejor</h2>
+        <p>Conocer bien tus ingredientes es esencial para lograr platos sabrosos, equilibrados y saludables. Aquí te mostramos algunos básicos que no pueden faltar en tu cocina:</p>
 
-        <ul>
-            <li>Aceite de oliva extra virgen</li>
-            <li>Hierbas frescas: albahaca, orégano, perejil</li>
-            <li>Verduras de temporada</li>
-            <li>Carnes seleccionadas y cortes nobles</li>
-            <li>Especias y condimentos naturales</li>
-        </ul>
+        <div class="ingredient-list">
+            <div class="ingredient-card">
+                <h3>🥬 Verduras frescas</h3>
+                <p>Siempre opta por productos de temporada: más sabor, mejor valor nutricional y apoyo a productores locales.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>🫒 Aceite de oliva extra virgen</h3>
+                <p>Ideal para aderezos, sofritos y terminaciones. Aporta sabor y beneficios para la salud.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>🧂 Especias y hierbas</h3>
+                <p>Desde pimienta y comino hasta albahaca y romero. Condimenta tus platos sin necesidad de añadir sal extra.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>🍗 Proteínas magras</h3>
+                <p>Elige cortes de carne magros, pescado fresco o legumbres como lentejas y garbanzos.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>🍞 Harinas integrales</h3>
+                <p>Una opción más saludable para panificados, masas y rebozados, con mayor aporte de fibra.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>🥛 Lácteos de calidad</h3>
+                <p>Yogures naturales, quesos frescos o leche orgánica son aliados en múltiples preparaciones.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -108,3 +161,5 @@
 
 </body>
 </html>
+
+
