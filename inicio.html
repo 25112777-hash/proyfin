@@ -1,44 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargas de Trípticos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas - Gastronomía Deliciosa</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            margin: 50px;
+        * {
+            box-sizing: border-box;
         }
-        h1 {
+
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f8f8;
             color: #333;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 15px 0;
-        }
-        a {
-            text-decoration: none;
+
+        header {
+            background-color: #2a9d8f;
+            padding: 50px 20px;
             color: white;
-            background-color: #007ACC;
-            padding: 10px 20px;
-            border-radius: 5px;
+            text-align: center;
         }
-        a:hover {
-            background-color: #005A99;
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #264653;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e9c46a;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        main h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #2a9d8f;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-card h3 {
+            color: #e76f51;
+            margin-top: 0;
+        }
+
+        .recipe-card p {
+            font-size: 0.95em;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #d45d3f;
+        }
+
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <h1>Descarga de Trípticos</h1>
-    <p>Haz clic en los enlaces para descargar los trípticos en PDF:</p>
-    <ul>
-        <li><a href="menu1.pdf" download>Descargar Tríptico 1</a></li>
-        <li><a href="menu2.pdf" download>Descargar Tríptico 2</a></li>
-        <li><a href="menu3.pdf" download>Descargar Tríptico 3</a></li>
-    </ul>
+
+    <header>
+        <h1>Recetas Deliciosas</h1>
+        <p>Descubre platos increíbles y cocina como un experto</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="recetas.html">Recetas</a>
+        <a href="ingredientes.html">Ingredientes</a>
+        <a href="consejos.html">Consejos</a>
+    </nav>
+
+    <main>
+        <h2>Explora nuestras mejores recetas</h2>
+        <p>Seleccionamos recetas variadas para todos los gustos: desde lo clásico hasta lo innovador, para sorprender a tus comensales.</p>
+
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <h3>🥘 Paella Valenciana</h3>
+                <p>Un clásico español lleno de sabor, con arroz, mariscos y el toque justo de azafrán.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>🍝 Pasta al Pesto</h3>
+                <p>Rápida y sabrosa, con albahaca fresca, piñones y parmesano. Ideal para una cena ligera.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>🥗 Ensalada Mediterránea</h3>
+                <p>Con tomates cherry, queso feta, pepino y aceitunas. Perfecta para días calurosos.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>🍰 Cheesecake de Frutos Rojos</h3>
+                <p>Postre cremoso y delicado, con una base de galletas y cobertura ácida y dulce a la vez.</p>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>¿Prefieres tenerlo en papel?</h2>
+            <p>Puedes descargar un PDF con nuestras recetas destacadas:</p>
+            <a href="menu1.pdf" class="download-btn" download>📄 Descargar menú en PDF</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Gastronomía Deliciosa. Todos los derechos reservados.
+    </footer>
+
 </body>
 </html>
